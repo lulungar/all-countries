@@ -22,7 +22,7 @@ export const useCountry = (countries, sort, search) => {
     return sortedCountries.filter((country) =>
       country.name.official.toLowerCase().includes(search.toLowerCase())
     );
-  }, [search, sortedCountries]);
+  }, [search, sortedCountries, sort]);
 
   return searchAndSortedCountries;
 };
