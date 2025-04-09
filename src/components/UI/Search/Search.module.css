@@ -1,0 +1,61 @@
+.controls {
+  margin: 50px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.controls input {
+  padding: 15px;
+  font-size: 15px;
+  width: 400px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+}
+
+.controls select {
+  padding: 10px;
+  width: 170px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+}
+
+.controls select option {
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+}
+
+input:focus {
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    padding: 0 50px;
+  }
+
+  .controls input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 532px) {
+  .controls {
+    padding: 0 15px;
+  }
+
+  .controls input {
+    width: 200px;
+  }
+}

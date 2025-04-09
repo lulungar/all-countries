@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --navbar-bg: #ffffff;
+  --navbar-text: #000000;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.dark-mode {
+  --bg-color: #202d36;
+  --text-color: #e5edef;
+  --navbar-bg: #2b3743;
+  --navbar-text: #e6e8e9;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(303px, 2fr));
+  gap: 60px;
+  width: 100%;
+  padding: 0 100px;
+}
+
+.country-card {
+  background: var(--navbar-bg);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.country-card img {
+  max-height: 202px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.country-card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 15px 35px 15px;
+}
+
+span {
+  font-weight: bold;
+}
+
+/* Country Info */
+
+.btns {
+  margin: 50px 0;
+  width: 100%;
+  padding: 0 100px;
+}
+
+.btn_back {
+  border: 1px solid var(--navbar-bg);
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+  padding: 9px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.info_container {
+  display: flex;
+  width: 100%;
+  padding: 0 100px;
+  gap: 60px;
+}
+
+.info_container .left img {
+  width: 500px;
+  height: 350px;
+}
+
+.info_container .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 16px;
+}
+
+.info_container_detailed {
+  display: flex;
+  gap: 50px;
+}
+
+.info_left,
+.info_right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Countries */
+@media (max-width: 768px) {
+  .countries-grid {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 532px) {
+  .countries-grid {
+    padding: 0 15px;
+  }
+}
+
+/* Country Info */
+
+@media (max-width: 1019px) {
+  .info_container {
+    flex-direction: column;
+  }
+
+  .info_container .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 701px) {
+  .btns {
+    padding: 0 50px;
+  }
+
+  .info_container {
+    padding: 0 50px;
+  }
+
+  .info_container .left img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 532px) {
+  .btns {
+    padding: 0 15px;
+  }
+
+  .info_container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .info_container_detailed {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
